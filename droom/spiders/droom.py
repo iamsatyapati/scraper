@@ -60,43 +60,43 @@ class Droom(scrapy.Spider):
 			owner = box.xpath('div/section[1]/div[1]/div[1]/div[1]/div[4]/div[4]/div[1]/div[4]/label[1]/text()').extract()
 
 			# filling the url
-			if url is not None:
+			if url:
 				cars['url'] = url
 			else:
 				cars['url'] = '?'
 
 			# filling the model
-			if model is not None:
+			if model:
 				cars['model'] = model
 			else:
 				cars['model'] = '?'
 
 			# filling the price
-			if price is not None:
+			if price:
 				cars['price'] = price
 			else:
 				cars['price'] = '?'
 
 			# filling the fuel
-			if fuel is not None:
+			if fuel:
 				cars['fuel'] = fuel
 			else:
 				cars['fuel'] = '?'
 
 			# filling the location
-			if location is not None:
+			if location:
 				cars['location'] = location
 			else:
 				cars['location'] = '?'
 
 			# filling the km_drove
-			if km_drove is not None:
+			if km_drove:
 				cars['km_drove'] = km_drove
 			else:
 				cars['km_drove'] = '?'
 
 			# filling the owner
-			if owner is not None:
+			if owner:
 				cars['owner'] = owner
 			else:
 				cars['owner'] = '?'
